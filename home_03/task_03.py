@@ -1,3 +1,5 @@
+import re
+
 """
 1. Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление. Числа запрашивать
 у пользователя, предусмотреть обработку ситуации деления на ноль.
@@ -91,10 +93,7 @@ def math(x, y):
               f"число!")
 
 
-print(math(2, -4))
-
-
-print(math(2, -4))
+math(3, -4)
 
 """
 5. Программа запрашивает у пользователя строку чисел, разделенных пробелом. При нажатии Enter должна выводиться сумма 
@@ -103,4 +102,46 @@ print(math(2, -4))
 программы завершается. Если специальный символ введен после нескольких чисел, то вначале нужно добавить сумму этих 
 чисел к полученной ранее сумме и после этого завершить программу. 
 """
+print('*' * 50)
+print('Пятая задача')
+print('*' * 50)
+
+# def user_sum():
+#     total_result = 0
+#
+#     while True:
+#         user_input = input('Введите число или # чтобы завершить программу: ').split()
+#         current_sum = 0
+#
+#         for element in range(len(user_input)):
+#             if user_input[element] == '#':
+#                 break
+#             else:
+#                 current_sum = current_sum + int(user_input[element])
+#         total_result = total_result + current_sum
+#         print(f'Ваша сумма - {total_result}')
+#     print(f'Общая сумма - {total_result}')
+#
+#
+# user_sum()
+
+'''
+6. Реализовать функцию int_func(), принимающую слово из маленьких латинских букв и возвращающую его же, 
+но с прописной первой буквой. Например, print(int_func(‘text’)) -> Text. 
+'''
+
+
+def int_func(user_input):
+    error_text = "Русские символы запрещены!"
+    alphabet = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у",
+                "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"]
+    for char in user_input:
+        if char in alphabet:
+            return error_text
+        else:
+            return user_input.title()
+
+
+user_input = input()
+print(int_func(user_input))
 
