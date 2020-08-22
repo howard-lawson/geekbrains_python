@@ -106,24 +106,24 @@ print('*' * 50)
 print('Пятая задача')
 print('*' * 50)
 
-# def user_sum():
-#     total_result = 0
-#
-#     while True:
-#         user_input = input('Введите число или # чтобы завершить программу: ').split()
-#         current_sum = 0
-#
-#         for element in range(len(user_input)):
-#             if user_input[element] == '#':
-#                 break
-#             else:
-#                 current_sum = current_sum + int(user_input[element])
-#         total_result = total_result + current_sum
-#         print(f'Ваша сумма - {total_result}')
-#     print(f'Общая сумма - {total_result}')
-#
-#
-# user_sum()
+def user_sum():
+    total_result = 0
+
+    while True:
+        user_input = input('Введите число или # чтобы завершить программу: ').split()
+        current_sum = 0
+
+        for element in range(len(user_input)):
+            if user_input[element] == '#':
+                break
+            else:
+                current_sum = current_sum + int(user_input[element])
+        total_result = total_result + current_sum
+        print(f'Ваша сумма - {total_result}')
+    print(f'Общая сумма - {total_result}')
+
+
+user_sum()
 
 '''
 6. Реализовать функцию int_func(), принимающую слово из маленьких латинских букв и возвращающую его же, 
